@@ -1,0 +1,1 @@
+Projet de 3ème année de Licence Informatique. Ce dernier avec pour objectif la manipulation des arbres binaires, puis des arbres binaires de recherche, et enfin les arbres binaires de recherche équilibrés (AVL). (Projet en oCaml)

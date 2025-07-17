@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.pgcdApplication.Controller.PgcdController"
+            >
+    <top>
+        <Label fx:id="titre" style="-fx-font-size: 35; -fx-underline: true">Largest Common Divider</Label>
+    </top>
+    <left>
+        <VBox>
+            <VBox fx:id="allValues">
+                <HBox spacing="10">
+                    <Label text="Value n°1 : " />
+                    <TextField fx:id="value1" promptText="Enter a value..." />
+                </HBox>
+                <HBox spacing="10">
+                    <Label text="Value n°2 : "/>
+                    <TextField fx:id="value2" promptText="Enter a value..." />
+                </HBox>
+            </VBox>
+            <HBox fx:id="addValueVbox">
+                <Button fx:id="addValue" text="Add a value" onAction="#addValueAction" style="-fx-font-weight: bold;"/>
+            </HBox>
+        </VBox>
+    </left>
+    <right>
+        <VBox fx:id="VBoxResult" spacing="10" style="-fx-padding: 30; -fx-spacing: 20">
+            <HBox>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button fx:id="solve" text="Solve" onAction="#solveAction" minWidth="100" minHeight="30" style="-fx-font-weight: bold"/>
+                <Region HBox.hgrow="ALWAYS"/>
+            </HBox>
+            <HBox>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button fx:id="reset" text="Reset" onAction="#resetAction" minWidth="100" minHeight="30" style="-fx-font-weight: bold"/>
+                <Region HBox.hgrow="ALWAYS"/>
+            </HBox>
+            <VBox minHeight="100" minWidth="100" spacing="10" style="-fx-border-color: black; -fx-padding:7">
+                <HBox>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Label text="Result :" style="-fx-font-size: 20; -fx-font-weight: bold"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                </HBox>
+                <HBox>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Label fx:id="result" style="-fx-font-size: 40; -fx-font-weight: bold"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </right>
+</BorderPane>
