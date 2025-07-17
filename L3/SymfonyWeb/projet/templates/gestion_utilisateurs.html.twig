@@ -1,0 +1,48 @@
+{% extends'Layouts/layoutsecondlevel.html.twig' %}
+
+{% block title %}Mon panier{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block javascripts %}{% endblock %}
+
+
+
+{% block content %}
+    <table class="custom-table">
+        <thead>
+        <tr class="table-row">
+            <th class="table-cell">Login</th>
+            <th class="table-cell">Password</th>
+            <th class="table-cell">Nom et prénom</th>
+            <th class="table-cell">Date de naissance</th>
+            <th class="table-cell">Status</th>
+            <th class="table-cell">Pays</th>
+            <th class="table-cell">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+        <tr class="table-row">
+            <td class="table-cell">{{ user.login }}</td>
+            <td class="table-cell">{{ user.password }}</td>
+            <td class="table-cell">{{ user.nom }} {{ user.prenom }}</td>
+            <td class="table-cell">{{ user.datenaissance|date('d/m/Y') }}</td>
+            <td class="table-cell">{{ user.roles|join(', ') }}</td>
+            {% if user.pays is not null %}
+                <td class="table-cell">{{ user.pays.nom }}</td>
+            {% else %}
+                <td class="table-cell">Aucun pays sélectionné</td>
+            {% endif %}
+            {% if 'ROLE_SUPERADMIN' not in user.roles and app.user.id != user.id %}
+                <td class="table-cell"><a href="{{ path('useraccount_supprimeruser', { 'iduser': user.id }) }}" class="btn btn-primary">Supprimer</a></td>
+            {% else %}
+                <td class="table-cell"></td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

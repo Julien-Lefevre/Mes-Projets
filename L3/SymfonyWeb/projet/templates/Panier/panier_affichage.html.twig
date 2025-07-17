@@ -1,0 +1,50 @@
+{% extends'Layouts/layoutsecondlevel.html.twig' %}
+
+{% block title %}Mon panier{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block javascripts %}{% endblock %}
+
+
+
+{% block content %}
+    <table class="custom-table">
+        <thead>
+        <tr class="table-row">
+            <th class="table-cell">Nom</th>
+            <th class="table-cell">Prix unitaire</th>
+            <th class="table-cell">Quantité</th>
+            <th class="table-cell">Prix total</th>
+            <th class="table-cell">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for panier in paniers %}
+        <tr class="table-row">
+            <td class="table-cell">{{ panier.produit.nom }}</td>
+            <td class="table-cell">{{ panier.produit.prix }}</td>
+            <td class="table-cell">{{ panier.quantite }}</td>
+            <td class="table-cell">{{ panier.produit.prix * panier.quantite }}</td>
+            <td class="table-cell"><a href="{{ path('panier_supprimer1produit', { 'idpanier': panier.id }) }}" class="btn btn-primary">Supprimer</a></td>
+        </tr>
+        {% endfor %}
+        <tr class="table-row">
+            <td class="table-cell">Total</td>
+            <td class="table-cell"></td>
+            <td class="table-cell">{{ totalproduits }}</td>
+            <td class="table-cell">{{ totalprix }}</td>
+            <td class="table-cell"></td>
+        </tr>
+        <tr class="table-row">
+            <td class="table-cell"></td>
+            <td class="table-cell"></td>
+            <td class="table-cell"></td>
+            <td class="table-cell"><a href="{{ path('panier_commander') }}" class="btn btn-primary">Commander</a></td>
+            <td class="table-cell"><a href="{{ path('panier_vider') }}" class="btn btn-primary">Vider</a></td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,42 @@
+h2 {
+    color: blue;
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+p {
+    color: red;
+}
+.btn.btn-primary {
+     display: inline-block;
+     padding: 10px 20px;
+     background-color: #007bff;
+     color: #fff;
+     text-decoration: none;
+     border-radius: 5px;
+     transition: background-color 0.3s ease;
+ }
+.btn.btn-primary:hover {
+    /* Styles au survol */
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+
+.custom-table {
+    border-collapse: collapse;
+}
+
+.table-row {
+    border-color: black;
+    border-width: medium ;
+    border-style: solid; /* Définir le style de la bordure */
+}
+
+.table-cell {
+    border-color: black;
+    border-width: medium;
+    border-style: solid; /* Définir le style de la bordure */
+}
+
+

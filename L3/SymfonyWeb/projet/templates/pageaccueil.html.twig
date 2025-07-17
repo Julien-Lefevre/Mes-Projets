@@ -1,0 +1,34 @@
+{% extends'Layouts/layoutsecondlevel.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ asset('CSS/pageaccueilCSS.css') }}">
+{% endblock %}
+
+{% block javascripts %}{% endblock %}
+
+{% block content %}
+    Bienvenu!!
+    <li>
+    {% if app.user %}
+        Vous êtes un
+        {% if is_granted('ROLE_SUPERADMIN') %}
+            super-administrateur
+        {% endif %}
+        {% if is_granted('ROLE_ADMIN') %}
+            administrateur
+        {% else %}
+            client
+        {% endif %}
+        {% if app.user.pays != null%}
+        et vous venez de {{ app.user.pays.nom }}.
+        {% else %}
+            .
+        {% endif %}
+    {% else %}
+        Vous etes non authentifié.
+    {% endif %}
+    </li>
+{% endblock %}
