@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/AiRankingActivityboutonValider"
+        style="@style/ButtonNextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:onClick="next"
+        android:text="@string/ConfirmText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AiRankingActivitySpinnerAnswer4" />
+
+    <TextView
+        android:id="@+id/AiRankingActivitytextViewLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="20dp"
+        android:labelFor="@id/AiRankingActivitySpinnerAnswer1"
+        android:text="1"
+        android:textColor="#6750A3"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/AiRankingActivitySpinnerAnswer1"
+        app:layout_constraintEnd_toStartOf="@+id/AiRankingActivitySpinnerAnswer1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/AiRankingActivitySpinnerAnswer1" />
+
+    <TextView
+        android:id="@+id/AiRankingActivitytextViewLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/AiRankingActivitySpinnerAnswer2"
+        android:text="2"
+        android:textColor="#6750A3"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/AiRankingActivitySpinnerAnswer2"
+        app:layout_constraintEnd_toEndOf="@+id/AiRankingActivitytextViewLabel"
+        app:layout_constraintStart_toStartOf="@+id/AiRankingActivitytextViewLabel"
+        app:layout_constraintTop_toTopOf="@+id/AiRankingActivitySpinnerAnswer2" />
+
+    <TextView
+        android:id="@+id/AiRankingActivitytextViewLabel3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/AiRankingActivitySpinnerAnswer3"
+        android:text="3"
+        android:textColor="#6750A3"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/AiRankingActivitySpinnerAnswer3"
+        app:layout_constraintEnd_toEndOf="@+id/AiRankingActivitytextViewLabel2"
+        app:layout_constraintStart_toStartOf="@+id/AiRankingActivitytextViewLabel2"
+        app:layout_constraintTop_toTopOf="@+id/AiRankingActivitySpinnerAnswer3" />
+
+    <TextView
+        android:id="@+id/AiRankingActivitytextViewLabel4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/AiRankingActivitySpinnerAnswer4"
+        android:text="4"
+        android:textColor="#6750A3"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/AiRankingActivitySpinnerAnswer4"
+        app:layout_constraintEnd_toEndOf="@+id/AiRankingActivitytextViewLabel3"
+        app:layout_constraintStart_toStartOf="@+id/AiRankingActivitytextViewLabel3"
+        app:layout_constraintTop_toTopOf="@+id/AiRankingActivitySpinnerAnswer4" />
+
+    <ProgressBar
+        android:id="@+id/AiRankingActivityprogressBar"
+        style="@style/ProgressBarStyleBlue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/AiRankingActivityViewPourcentage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AiRankingActivityTextViewTitle" />
+
+    <TextView
+        android:id="@+id/AiRankingActivityViewPourcentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/AiRankingActivityprogressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/AiRankingActivityprogressBar"
+        app:layout_constraintTop_toTopOf="@+id/AiRankingActivityprogressBar" />
+
+    <Spinner
+        android:id="@+id/AiRankingActivitySpinnerAnswer1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:entries="@array/AI_name"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/AiRankingActivitySpinnerAnswer2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/AiRankingActivitytextViewLabel"
+        app:layout_constraintTop_toBottomOf="@+id/AiRankingActivityQuestion" />
+
+    <Spinner
+        android:id="@+id/AiRankingActivitySpinnerAnswer2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/AI_name"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/AiRankingActivitySpinnerAnswer3"
+        app:layout_constraintEnd_toEndOf="@+id/AiRankingActivitySpinnerAnswer1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/AiRankingActivitySpinnerAnswer1"
+        app:layout_constraintTop_toBottomOf="@+id/AiRankingActivitySpinnerAnswer1" />
+
+    <Spinner
+        android:id="@+id/AiRankingActivitySpinnerAnswer3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/AI_name"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/AiRankingActivitySpinnerAnswer4"
+        app:layout_constraintEnd_toEndOf="@+id/AiRankingActivitySpinnerAnswer2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/AiRankingActivitySpinnerAnswer2"
+        app:layout_constraintTop_toBottomOf="@+id/AiRankingActivitySpinnerAnswer2" />
+
+    <Spinner
+        android:id="@+id/AiRankingActivitySpinnerAnswer4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/AI_name"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/AiRankingActivityboutonValider"
+        app:layout_constraintEnd_toEndOf="@+id/AiRankingActivitySpinnerAnswer3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/AiRankingActivitySpinnerAnswer3"
+        app:layout_constraintTop_toBottomOf="@+id/AiRankingActivitySpinnerAnswer3" />
+
+    <TextView
+        android:id="@+id/AiRankingActivityQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:minHeight="48dp"
+        android:text="@string/AiRankingActivity_question"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/AiRankingActivitySpinnerAnswer1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AiRankingActivityprogressBar" />
+
+    <TextView
+        android:id="@+id/AiRankingActivityTextViewTitle"
+        style="@style/TextViewQuizTitleStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/AiRankingActivity_titre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

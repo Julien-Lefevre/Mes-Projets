@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ImageActivity">
+
+    <Button
+        android:id="@+id/imageActivityButtonNext"
+        style="@style/ButtonNextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:onClick="next"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageActivityImageView" />
+
+    <ProgressBar
+        android:id="@+id/imageActivityProgressBar"
+        style="@style/ProgressBarStyleBlue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageActivityTextViewPourcentage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageActivityTextViewTitle" />
+
+    <TextView
+        android:id="@+id/imageActivityTextViewQuestionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/question"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageActivityTextViewQuestionDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageActivityProgressBar" />
+
+    <TextView
+        android:id="@+id/imageActivityTextViewQuestionDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/QuestionActivityImage"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageActivityImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageActivityTextViewQuestionLabel" />
+
+    <ImageView
+        android:id="@+id/imageActivityImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/image"
+        app:layout_constraintBottom_toTopOf="@+id/imageActivityButtonNext"
+        app:layout_constraintEnd_toStartOf="@+id/imageActivityTextViewReponse"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageActivityTextViewQuestionDescription"
+        tools:src="@drawable/ia1" />
+
+    <TextView
+        android:id="@+id/imageActivityTextViewReponse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/reponse"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageActivityRadioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageActivityImageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageActivityProgressBar" />
+
+    <RadioGroup
+        android:id="@+id/imageActivityRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/imageActivityButtonNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/imageActivityTextViewReponse"
+        app:layout_constraintTop_toBottomOf="@+id/imageActivityTextViewReponse">
+
+        <RadioButton
+            android:id="@+id/imageActivityRadioButtonOui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/oui" />
+
+        <RadioButton
+            android:id="@+id/imageActivityRadioButtonNon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/non" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/imageActivityTextViewPourcentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageActivityProgressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageActivityProgressBar"
+        app:layout_constraintTop_toTopOf="@+id/imageActivityProgressBar" />
+
+    <TextView
+        android:id="@+id/imageActivityTextViewTitle"
+        style="@style/TextViewQuizTitleStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/ImageActivityTitre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

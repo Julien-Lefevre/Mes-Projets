@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="AI_name">
+        <item>@string/AIRankingChoice1</item>
+        <item>@string/AIRankingChoice2</item>
+        <item>@string/AIRankingChoice3</item>
+        <item>@string/AIRankingChoice4</item>
+    </string-array>
+</resources>

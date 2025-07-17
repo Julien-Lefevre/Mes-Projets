@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Expertise2Activity">
+
+    <ProgressBar
+        android:id="@+id/expertise2ActivityProgressBar"
+        style="@style/ProgressBarStyleBlue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/expertise2ActivityProgressBarPourcentage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expertise2ActivityTextViewTitle" />
+
+    <TextView
+        android:id="@+id/expertise2ActivityProgressBarPourcentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/expertise2ActivityProgressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/expertise2ActivityProgressBar"
+        app:layout_constraintTop_toTopOf="@+id/expertise2ActivityProgressBar" />
+
+    <TextView
+        android:id="@+id/expertise2ActivityTextViewQuestion1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="30dp"
+        android:text="@string/expertise1Question2"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/expertise2ActivityseekBarQuestion1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expertise2ActivityProgressBar" />
+
+    <SeekBar
+        android:id="@+id/expertise2ActivityseekBarQuestion1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:max="100"
+        android:min="0"
+        android:progressTint="@color/ligth_blue"
+        app:layout_constraintBottom_toTopOf="@+id/expertise2ActivityTextViewQuestion2"
+        app:layout_constraintEnd_toStartOf="@+id/expertise2ActivitySeekBarQuestion1Pourcentage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expertise2ActivityTextViewQuestion1" />
+
+    <TextView
+        android:id="@+id/expertise2ActivityTextViewQuestion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/expertise2Question2"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/expertise2ActivityChipGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expertise2ActivityseekBarQuestion1" />
+
+    <Button
+        android:id="@+id/expertise2ActivityButtonValider"
+        style="@style/ButtonNextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/ConfirmText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expertise2ActivityChipGroup" />
+
+    <TextView
+        android:id="@+id/expertise2ActivitySeekBarQuestion1Pourcentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/expertise2ActivityseekBarQuestion1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/expertise2ActivityseekBarQuestion1"
+        app:layout_constraintTop_toTopOf="@+id/expertise2ActivityseekBarQuestion1" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/expertise2ActivityChipGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center_horizontal"
+        app:chipSpacingVertical="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/expertise2ActivityButtonValider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expertise2ActivityTextViewQuestion2">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/expertise2ActivityChipAnswer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:gravity="center"
+            android:text="@string/expertise2Question2Answer1"
+            android:textAlignment="center"
+            app:chipBackgroundColor="@color/chip_color_selector" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/expertise2ActivityChipAnswer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="@string/expertise2Question2Answer2"
+            app:chipBackgroundColor="@color/chip_color_selector" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/expertise2ActivityChipAnswer3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="@string/expertise2Question2Answer3"
+            app:chipBackgroundColor="@color/chip_color_selector" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/expertise2ActivityChipAnswer4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="@string/expertise2Question2Answer4"
+            app:chipBackgroundColor="@color/chip_color_selector" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/expertise2ActivityChipAnswer5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="@string/expertise2Question2Answer5"
+            app:chipBackgroundColor="@color/chip_color_selector" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/expertise2ActivityChipAnswer6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="@string/expertise2Question2Answer6"
+            app:chipBackgroundColor="@color/chip_color_selector" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/expertise2ActivityTextViewTitle"
+        style="@style/TextViewQuizTitleStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/expertise_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

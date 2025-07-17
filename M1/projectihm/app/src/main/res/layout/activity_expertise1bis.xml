@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Expertise1bisActivity">
+
+    <ProgressBar
+        android:id="@+id/expertise1ActivityProgressBar"
+        style="@style/ProgressBarStyleBlue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/expertiseActivityTextViewPourcentage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expertise1ActivityTextViewTitle" />
+
+    <TextView
+        android:id="@+id/expertise1ActivityTextViewQuestionLabel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/question"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/expertise1ActivityQuestion1TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expertise1ActivityProgressBar" />
+
+    <TextView
+        android:id="@+id/expertise1ActivityQuestion1TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_horizontal"
+        android:text="@string/expertise1Question1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/expertise1ActivityRadioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expertise1ActivityTextViewQuestionLabel1" />
+
+    <RadioGroup
+        android:id="@+id/expertise1ActivityRadioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/expertise1ActivityButtonValider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expertise1ActivityQuestion1TextView">
+
+        <RadioButton
+            android:id="@+id/expertise1ActivityRadioButton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/expertise1ActivityRadioButtonA"
+            android:textAlignment="center" />
+
+        <RadioButton
+            android:id="@+id/expertise1ActivityRadioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/expertise1ActivityRadioButtonB"
+            android:textAlignment="center" />
+
+        <RadioButton
+            android:id="@+id/expertise1ActivityRadioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/expertise1ActivityRadioButtonC"
+            android:textAlignment="center" />
+
+        <RadioButton
+            android:id="@+id/expertise1ActivityRadioButton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/expertise1ActivityRadioButtonD"
+            android:textAlignment="center" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/expertise1ActivityButtonValider"
+        style="@style/ButtonNextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/ConfirmText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expertise1ActivityRadioGroup" />
+
+    <TextView
+        android:id="@+id/expertiseActivityTextViewPourcentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/expertise1ActivityProgressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/expertise1ActivityProgressBar"
+        app:layout_constraintTop_toTopOf="@+id/expertise1ActivityProgressBar" />
+
+    <TextView
+        android:id="@+id/expertise1ActivityTextViewTitle"
+        style="@style/TextViewQuizTitleStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/expertise_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

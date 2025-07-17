@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".activities.DestructionIaActivity">
+
+    <ProgressBar
+        android:id="@+id/destructionIaActivityProgressBar"
+        style="@style/ProgressBarStyleBlue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:maxHeight="16dip"
+        app:layout_constraintEnd_toStartOf="@+id/destructionIaActivityTextViewProgressPourcentage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/destructionIaActivityTextViewTitle" />
+
+    <TextView
+        android:id="@+id/destructionIaActivityTextViewProgressPourcentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/destructionIaActivityProgressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/destructionIaActivityProgressBar"
+        app:layout_constraintTop_toTopOf="@+id/destructionIaActivityProgressBar" />
+
+    <TextView
+        android:id="@+id/destructionIaActivityTextViewQuestion1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/DestroyQuestion1"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/destructioniaActivityRadioGroupQuestion1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/destructionIaActivityProgressBar" />
+
+    <RadioGroup
+        android:id="@+id/destructioniaActivityRadioGroupQuestion1"
+        android:layout_width="254dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/destructionIaActivityTextViewCaseNo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/destructionIaActivityTextViewQuestion1">
+
+        <RadioButton
+            android:id="@+id/destructionIaActivityRadioButtonYes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/yesText" />
+
+        <RadioButton
+            android:id="@+id/destructionIaActivityRadioButtonNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/Notext" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/destructionIaActivityTextViewCaseYes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/destructionYesCase"
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/destructionIaActivitySwitchQuestion2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/destructionIaActivityTextViewCaseNo" />
+
+    <TextView
+        android:id="@+id/destructionIaActivityTextViewCaseNo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/destructionAnswerNoCase"
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/destructionIaActivityTextViewCaseYes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/destructioniaActivityRadioGroupQuestion1" />
+
+    <Switch
+        android:id="@+id/destructionIaActivitySwitchQuestion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/destructionIaActivityButtonValidate"
+        app:layout_constraintEnd_toStartOf="@+id/destructionIaActivityTextView2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/destructionIaActivityTextView1"
+        app:layout_constraintTop_toBottomOf="@+id/destructionIaActivityTextViewCaseYes" />
+
+    <TextView
+        android:id="@+id/destructionIaActivityTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Notext"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/destructionIaActivitySwitchQuestion2"
+        app:layout_constraintEnd_toStartOf="@+id/destructionIaActivitySwitchQuestion2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/destructionIaActivitySwitchQuestion2" />
+
+    <TextView
+        android:id="@+id/destructionIaActivityTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yesText"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/destructionIaActivitySwitchQuestion2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/destructionIaActivitySwitchQuestion2"
+        app:layout_constraintTop_toTopOf="@+id/destructionIaActivitySwitchQuestion2" />
+
+    <Button
+        android:id="@+id/destructionIaActivityButtonValidate"
+        style="@style/ButtonNextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/ConfirmText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/destructionIaActivitySwitchQuestion2" />
+
+    <TextView
+        android:id="@+id/destructionIaActivityTextViewTitle"
+        style="@style/TextViewQuizTitleStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/scaredText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

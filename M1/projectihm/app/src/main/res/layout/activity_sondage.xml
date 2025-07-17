@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SondageActivity">
+
+    <ProgressBar
+        android:id="@+id/sondageActivityProgressBar"
+        style="@style/ProgressBarStyleBlue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/sondageActivityTextViewPourcentage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sondageActivityTextViewTitle" />
+
+    <TextView
+        android:id="@+id/sondageActivityTextViewPourcentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sondageActivityProgressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sondageActivityProgressBar"
+        app:layout_constraintTop_toTopOf="@+id/sondageActivityProgressBar" />
+
+    <TextView
+        android:id="@+id/sondageActivityTextViewAvisIA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/question1sondage"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/sondageActivityRatingBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sondageActivityProgressBar" />
+
+    <TextView
+        android:id="@+id/sondageActivityTextViewDeteste"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deteste"
+        app:layout_constraintBottom_toBottomOf="@+id/sondageActivityRatingBar"
+        app:layout_constraintEnd_toStartOf="@+id/sondageActivityRatingBar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sondageActivityRatingBar" />
+
+    <TextView
+        android:id="@+id/sondageActivityTextViewAdore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/adore"
+        app:layout_constraintBottom_toBottomOf="@+id/sondageActivityRatingBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sondageActivityRatingBar"
+        app:layout_constraintTop_toTopOf="@+id/sondageActivityRatingBar" />
+
+    <TextView
+        android:id="@+id/sondageActivityTextViewUtilisationIa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/question2Sondage"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/sondageActivitySeekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sondageActivityRatingBar" />
+
+    <TextView
+        android:id="@+id/sondageActivityTextViewJamais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/jamais"
+        app:layout_constraintBottom_toBottomOf="@+id/sondageActivitySeekBar"
+        app:layout_constraintEnd_toStartOf="@+id/sondageActivitySeekBar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sondageActivitySeekBar" />
+
+    <TextView
+        android:id="@+id/sondageActivityTextViewSouvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/souvent"
+        app:layout_constraintBottom_toBottomOf="@+id/sondageActivitySeekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sondageActivitySeekBar"
+        app:layout_constraintTop_toTopOf="@+id/sondageActivitySeekBar" />
+
+    <Button
+        android:id="@+id/sondageActivityButtonNext"
+        style="@style/ButtonNextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:onClick="next"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sondageActivitySeekBar" />
+
+    <SeekBar
+        android:id="@+id/sondageActivitySeekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:indeterminateOnly="false"
+        android:max="10"
+        android:progress="5"
+        android:progressTint="@color/ligth_blue"
+        app:layout_constraintBottom_toTopOf="@+id/sondageActivityButtonNext"
+        app:layout_constraintEnd_toStartOf="@+id/sondageActivityTextViewSouvent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sondageActivityTextViewJamais"
+        app:layout_constraintTop_toBottomOf="@+id/sondageActivityTextViewUtilisationIa" />
+
+    <RatingBar
+        android:id="@+id/sondageActivityRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressTint="#FFFF00"
+        app:layout_constraintBottom_toTopOf="@+id/sondageActivityTextViewUtilisationIa"
+        app:layout_constraintEnd_toStartOf="@+id/sondageActivityTextViewAdore"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sondageActivityTextViewDeteste"
+        app:layout_constraintTop_toBottomOf="@+id/sondageActivityTextViewAvisIA" />
+
+    <TextView
+        android:id="@+id/sondageActivityTextViewTitle"
+        style="@style/TextViewQuizTitleStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/sondageTitre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

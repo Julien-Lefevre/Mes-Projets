@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SondagePeurActivity">
+
+    <ProgressBar
+        android:id="@+id/peurActivityProgressBar"
+        style="@style/ProgressBarStyleBlue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:progressTint="#664FA3"
+        app:layout_constraintEnd_toStartOf="@+id/peurActivityTextViewPourcentage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/peurActivityTextViewTitle" />
+
+    <TextView
+        android:id="@+id/peurActivityTextViewPourcentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/peurActivityProgressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/peurActivityProgressBar"
+        app:layout_constraintTop_toTopOf="@+id/peurActivityProgressBar" />
+
+    <TextView
+        android:id="@+id/peurActivityTextViewQuestionControlleIA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/IaWorldControlQuestion"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/peurActivitySpinnerReponses"
+        app:layout_constraintEnd_toEndOf="@+id/peurActivityProgressBar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/peurActivityProgressBar"
+        app:layout_constraintTop_toBottomOf="@+id/peurActivityProgressBar" />
+
+    <Spinner
+        android:id="@+id/peurActivitySpinnerReponses"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/array_sondage_peur_choices"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/peurActivityTextViewQuestionMots"
+        app:layout_constraintEnd_toEndOf="@+id/peurActivityTextViewQuestionControlleIA"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/peurActivityTextViewQuestionControlleIA"
+        app:layout_constraintTop_toBottomOf="@+id/peurActivityTextViewQuestionControlleIA" />
+
+    <TextView
+        android:id="@+id/peurActivityTextViewQuestionMots"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/selectionQuestionSondagePeur"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/peurActivityCheckBoxProgres"
+        app:layout_constraintEnd_toEndOf="@+id/peurActivityTextViewQuestionControlleIA"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/peurActivityTextViewQuestionControlleIA"
+        app:layout_constraintTop_toBottomOf="@+id/peurActivitySpinnerReponses" />
+
+    <CheckBox
+        android:id="@+id/peurActivityCheckBoxProgres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/advances"
+        app:layout_constraintBottom_toTopOf="@+id/peurActivityCheckBoxIncontrolable"
+        app:layout_constraintStart_toStartOf="@+id/peurActivityCheckBoxIncontrolable"
+        app:layout_constraintTop_toBottomOf="@+id/peurActivityTextViewQuestionMots" />
+
+    <CheckBox
+        android:id="@+id/peurActivityCheckBoxIncontrolable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/outofcontrol"
+        app:layout_constraintBottom_toTopOf="@+id/peurActivityCheckBoxErreur"
+        app:layout_constraintStart_toStartOf="@+id/peurActivityCheckBoxErreur"
+        app:layout_constraintTop_toBottomOf="@+id/peurActivityCheckBoxProgres" />
+
+    <CheckBox
+        android:id="@+id/peurActivityCheckBoxErreur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mistake"
+        app:layout_constraintBottom_toTopOf="@+id/peurActivityCheckBoxIntelligence"
+        app:layout_constraintStart_toStartOf="@+id/peurActivityCheckBoxIntelligence"
+        app:layout_constraintTop_toBottomOf="@+id/peurActivityCheckBoxIncontrolable" />
+
+    <CheckBox
+        android:id="@+id/peurActivityCheckBoxIntelligence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/intelligence"
+        app:layout_constraintBottom_toTopOf="@+id/peurActivityButtonValider"
+        app:layout_constraintEnd_toStartOf="@+id/peurActivityCheckBoxSurveillance"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/peurActivityCheckBoxErreur" />
+
+    <CheckBox
+        android:id="@+id/peurActivityCheckBoxDanger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Danger"
+        app:layout_constraintBottom_toBottomOf="@+id/peurActivityCheckBoxProgres"
+        app:layout_constraintStart_toStartOf="@+id/peurActivityCheckBoxFiabilite"
+        app:layout_constraintTop_toTopOf="@+id/peurActivityCheckBoxProgres" />
+
+    <CheckBox
+        android:id="@+id/peurActivityCheckBoxFiabilite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reliability"
+        app:layout_constraintBottom_toBottomOf="@+id/peurActivityCheckBoxIncontrolable"
+        app:layout_constraintStart_toStartOf="@+id/peurActivityCheckBoxPratique"
+        app:layout_constraintTop_toTopOf="@+id/peurActivityCheckBoxIncontrolable"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/peurActivityCheckBoxPratique"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/practical"
+        app:layout_constraintBottom_toBottomOf="@+id/peurActivityCheckBoxErreur"
+        app:layout_constraintStart_toStartOf="@+id/peurActivityCheckBoxSurveillance"
+        app:layout_constraintTop_toTopOf="@+id/peurActivityCheckBoxErreur"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/peurActivityCheckBoxSurveillance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/monitoring"
+        app:layout_constraintBottom_toBottomOf="@+id/peurActivityCheckBoxIntelligence"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/peurActivityCheckBoxIntelligence"
+        app:layout_constraintTop_toTopOf="@+id/peurActivityCheckBoxIntelligence" />
+
+    <Button
+        android:id="@+id/peurActivityButtonValider"
+        style="@style/ButtonNextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:onClick="next"
+        android:text="@string/ConfirmText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/peurActivityCheckBoxIntelligence" />
+
+    <TextView
+        android:id="@+id/peurActivityTextViewTitle"
+        style="@style/TextViewQuizTitleStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/sondagePeurTitre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

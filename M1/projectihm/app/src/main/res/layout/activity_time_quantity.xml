@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.TimeQuantityActivity">
+
+    <Button
+        android:id="@+id/TimeQuantityActivityBoutonValider"
+        style="@style/ButtonNextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:onClick="next"
+        android:text="@string/ConfirmText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TimeQuantityActivityAnswerChoiceSeekbar" />
+
+    <TextView
+        android:id="@+id/TimeQuantityActivityViewPourcentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/TimeQuantityActivityprogressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/TimeQuantityActivityprogressBar"
+        app:layout_constraintTop_toTopOf="@+id/TimeQuantityActivityprogressBar" />
+
+    <TextView
+        android:id="@+id/TimeQuantityActivityQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/TimeQuantityActivityQuestion"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/TimeQuantityActivityAnswerChoiceSeekbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TimeQuantityActivityprogressBar" />
+
+    <ProgressBar
+        android:id="@+id/TimeQuantityActivityprogressBar"
+        style="@style/ProgressBarStyleBlue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/TimeQuantityActivityViewPourcentage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TimeQuantityActivityTextViewTitle" />
+
+    <SeekBar
+        android:id="@+id/TimeQuantityActivityAnswerChoiceSeekbar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:max="5"
+        android:progress="1"
+        android:progressTint="@color/ligth_blue"
+        app:layout_constraintBottom_toTopOf="@+id/TimeQuantityActivityBoutonValider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TimeQuantityActivityQuestion" />
+
+    <TextView
+        android:id="@+id/TimeQuantityActivityChoice2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/TimeQuantity2"
+        app:layout_constraintBottom_toTopOf="@+id/TimeQuantityActivityAnswerChoiceSeekbar"
+        app:layout_constraintEnd_toStartOf="@+id/TimeQuantityActivityChoice3"
+        app:layout_constraintStart_toEndOf="@+id/TimeQuantityActivityChoice1" />
+
+    <TextView
+        android:id="@+id/TimeQuantityActivityChoice6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/TimeQuantity6"
+        app:layout_constraintBottom_toBottomOf="@+id/TimeQuantityActivityChoice4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TimeQuantityActivityChoice4" />
+
+    <TextView
+        android:id="@+id/TimeQuantityActivityChoice3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TimeQuantity3"
+        app:layout_constraintBottom_toBottomOf="@+id/TimeQuantityActivityChoice1"
+        app:layout_constraintEnd_toStartOf="@+id/TimeQuantityActivityChoice4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/TimeQuantityActivityChoice2"
+        app:layout_constraintTop_toTopOf="@+id/TimeQuantityActivityChoice1" />
+
+    <TextView
+        android:id="@+id/TimeQuantityActivityChoice5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TimeQuantity5"
+        app:layout_constraintBottom_toBottomOf="@+id/TimeQuantityActivityChoice3"
+        app:layout_constraintEnd_toStartOf="@+id/TimeQuantityActivityChoice6"
+        app:layout_constraintStart_toEndOf="@+id/TimeQuantityActivityChoice4"
+        app:layout_constraintTop_toTopOf="@+id/TimeQuantityActivityChoice3" />
+
+    <TextView
+        android:id="@+id/TimeQuantityActivityChoice4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TimeQuantity4"
+        app:layout_constraintBottom_toBottomOf="@+id/TimeQuantityActivityChoice2"
+        app:layout_constraintEnd_toStartOf="@+id/TimeQuantityActivityChoice5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/TimeQuantityActivityChoice3"
+        app:layout_constraintTop_toTopOf="@+id/TimeQuantityActivityChoice2" />
+
+    <TextView
+        android:id="@+id/TimeQuantityActivityChoice1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/TimeQuantity1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TimeQuantityActivityAnswerChoiceSeekbar" />
+
+    <TextView
+        android:id="@+id/TimeQuantityActivityTextViewTitle"
+        style="@style/TextViewQuizTitleStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/quizz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
