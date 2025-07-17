@@ -1,0 +1,67 @@
+(* 1.1.1 Syntaxe abstraite *)
+
+(* Question 1 : *)
+
+type aexp =
+  | Cst of int
+  | Var of string
+  | Add of aexp * aexp
+  | Sub of aexp * aexp
+  | Mult of aexp * aexp
+;;
+
+(* Question 2 : *)
+(* voir dans le fichier "aexp_exemples.ml" *)
+
+(* Question 3 : *)
+
+(* Question 3.1 : *)
+
+let rec aexp_to_string(expr : aexp) : string =
+  match expr with
+  | Cst x -> string_of_int x
+  | Var x -> x
+  | Add (x,y) -> "(" ^ (aexp_to_string x) ^ "+" ^ (aexp_to_string y) ^ ")"
+  | Sub (x,y) -> "(" ^ (aexp_to_string x) ^ "-" ^ (aexp_to_string y) ^ ")"
+  | Mult (x,y) -> "(" ^ (aexp_to_string x) ^ "*" ^ (aexp_to_string y) ^ ")"
+;;
+
+(* Question 3.2 : *)
+(* voir dans le fichier "aexp_exemples.ml" *)
+
+(* 1.1.2 Interprétation *)
+
+(* Question 4 : *)
+
+type valuation = (string * int) list;;
+
+(* Question 5 : *)
+
+let rec ainterp ( expr: aexp) (value : valuation) : int =
+  match expr with
+  | Cst x -> x
+  | Var x -> (try (List.assoc x value) with Not_found -> failwith("erreur variable x non définie"))
+  | Add (x,y) -> (ainterp x value) + (ainterp y value)
+  | Sub (x,y) -> (ainterp x value) - (ainterp y value )
+  | Mult (x,y) -> (ainterp x value) * (ainterp y value)
+;;
+
+
+(* Question 6 : *)
+(* voir dans le fichier "aexp_exemples.ml" *)
+
+(* 1.1.3 Substitutions *)
+
+(* Question 7 : *)
+
+let rec asubst (name : string) (replace : aexp) (expr : aexp) : aexp =
+  match expr with
+  | Cst x -> Cst x
+  | Var x -> if(x = name) then replace else Var x
+  | Add (x, y) -> Add(asubst name replace x, asubst name replace y)
+  | Sub (x, y) -> Sub(asubst name replace x, asubst name replace y)
+  | Mult (x, y) -> Mult(asubst name replace x, asubst name replace y)
+;;
+
+(* Question 8 : *)
+(* voir dans le fichier "aexp_exemples.ml" *)
